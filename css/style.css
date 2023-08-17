@@ -1,0 +1,140 @@
+:root{
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+body{
+  background-color: var(--cream);
+}
+.container{
+  display: table;
+  background-color: var(--white);
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 450px;
+  width: 600px;
+}
+/* FIRST SIDE */
+.first-side{
+  background-image: url("../images/image-product-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px 0 0 10px;
+  display: table-cell;
+  width:300px;
+  height: 300px;
+}
+/* SECOND SIDE */
+.second-side-content{
+  vertical-align: middle;
+  max-height: 100%;
+  padding: 40px;
+  display: table-cell;
+  background-color: var(--white);
+  width:300px;
+  border-radius: 0 10px 10px 0;
+  box-sizing: border-box;
+}
+.second-side h4{
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:500;
+  color: var(--dark-grayish-blue);
+  padding-bottom: 20px;
+}
+.second-side h1{
+  font-family: 'Fraunces', serif;
+  color: var(--very-dark-blue);
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+.second-side p{
+  font-size: 14px;
+  line-height: normal;
+  color: var(--dark-grayish-blue);
+  font-family: 'Montserrat', sans-serif;
+  font-weight:500;
+  padding-bottom: 20px;
+}
+.second-side h1:nth-of-type(2){
+  color: var(--dark-cyan);
+  padding-bottom: 20px;
+}
+.second-side span{
+  color: var(--dark-grayish-blue);
+  font-size: 14px;
+  text-decoration: line-through;
+  position: relative;
+  bottom:7px;
+  left: 10px;
+}
+/* BUTTON */
+.second-side button{
+  background-color: var(--dark-cyan);
+  border: none;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:700;
+  color: var(--white);
+  border-radius: 10px;
+  -webkit-filter: brightness(100%);
+  transition: all 1s ease;
+}
+.second-side button:active{
+background-color: var(--dark-cyan);
+-webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+}
+.second-side button:hover{
+background-color: var(--dark-cyan);
+-webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    cursor: pointer;
+}
+
+/* MEDIA QUERY <600px */
+@media screen and (max-width: 600px) {
+  .container{
+    transform: translateX(25%);
+    display: grid;
+    margin: 40px 20px;
+    width:300px;
+    height: 850px;
+  }
+  /* FIRST SIDE */
+  .first-side{
+    background-image: url("../images/image-product-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    width:300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  /* SECOND SIDE */
+  .second-side-content{
+    padding:10px 20px;
+  }
+.second-side{margin: 0 auto;}
+.second-side h4{
+  padding-bottom: 5px;
+}
+.second-side h1{
+  padding-bottom: 5px;
+}
+
+.second-side h1:nth-of-type(2){
+  padding-bottom: 5px;
+}
+
+  .attribution{
+    display: none;
+  }
+}
